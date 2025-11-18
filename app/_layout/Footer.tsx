@@ -3,6 +3,7 @@ import Whatsapp from "@public/instagram.svg";
 import Facebook from "@public/facebook.svg";
 import Instagram from "@public/instagram.svg";
 import Link from "next/link";
+import Logo from "@public/pf-logo-2.png";
 
 const Footer = () => {
   return (
@@ -25,22 +26,9 @@ const Footer = () => {
 
             {/* Logo */}
             <div className="w-40 md:w-56 h-auto mb-6 md:mb-0">
-              {/* <Image src={Logo} alt="Malbriz Ventures" className="object-contain" /> */}
-               <div className="flex items-center gap-2 mb-4">
-            <div className="bg-white rounded-full p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-green-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                  d="M9 12h6m-3-3v6m9-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold text-white">PharmaFleet</span>
-          </div>
+                    <Link href={"/"}> <Image src={Logo} alt="pharmafleet Logo" className="h-12 w-36 md:w-52  md:h-16 object-cover" /></Link>
+
+              
             </div>
           </div>
 

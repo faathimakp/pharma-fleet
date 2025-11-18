@@ -1,27 +1,28 @@
 import Image from "next/image";
-import serviceMain from "@public/thermometer-pills-syringe-plastic-bottle-green-background.jpg";
+import serviceMain from "@public/about.jpg";
 import Bg from "@public/61808.jpg";
 import CardAnimation from "../components/animations/CardAnimation";
 
 const services = [
-  {
-    icon: "24",
-    iconClass: "w-14 h-14 sm:w-16 sm:h-16",
-    title: "Efficient Same Day Delivery",
-    desc: "We prioritize timely medication delivery so you always receive your prescriptions promptly and reliably.",
-  },
-  {
-    icon: "✓",
-    iconClass: "w-14 h-14 sm:w-16 sm:h-16",
-    title: "Safe & Secure Delivery",
-    desc: "With contactless delivery and strict safety measures, we guarantee a secure transfer of your medications.",
-  },
-  {
-    icon: "L",
-    iconClass: "w-14 h-14 sm:w-16 sm:h-16",
-    title: "Convenient Scheduled Delivery",
-    desc: "Never run out of medication—schedule recurring deliveries based on your preferred time.",
-  },
+ {
+  icon: "24",
+  iconClass: "w-12 h-12 sm:w-16 sm:h-16",
+  title: "Efficient Same-Day Pickup & Delivery",
+  desc: "We provide fast, same-day medicine pickup and delivery services so pharmacies can guarantee timely service to their patients.",
+},
+{
+  icon: "✓",
+  iconClass: "w-12 h-12 sm:w-16 sm:h-16",
+  title: "Safe & Secure Handling",
+  desc: "From pickup to drop-off, every order is tracked, verified, and handled with strict safety protocols to protect sensitive medications.",
+},
+{
+  icon: "L",
+  iconClass: "w-12 h-12 sm:w-16 sm:h-16",
+  title: "Scheduled & Recurring Deliveries",
+  desc: "Set daily, weekly, or on-demand delivery schedules that align with your pharmacy’s workflow—ensuring uninterrupted service for your customers.",
+},
+
 ];
 
 export default function ServiceSection() {
@@ -71,7 +72,7 @@ export default function ServiceSection() {
                   <h3 className=" font-serif font-semibold text-[#0d4d2e] mb-2 md:mb-4 text-xl sm:text-2xl lg:text-3xl">
                     {item.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  <p className="text-gray-950 leading-relaxed text-base sm:text-lg">
                     {item.desc}
                   </p>
                 </div>
