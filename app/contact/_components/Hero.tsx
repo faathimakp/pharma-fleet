@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Whatsapp from "@public/instagram.svg";
-import Facebook from "@public/instagram.svg";
-import Instagram from "@public/instagram.svg";
+// import Whatsapp from "@public/instagram.svg";
+// import Facebook from "@public/instagram.svg";
+// import Instagram from "@public/instagram.svg";
 
 import Link from "next/link";
 
@@ -47,7 +47,7 @@ const Hero = () => {
       `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.number}\nAddress: ${data.address}\nMessage:\n${data.message}`
     );
 
-    const mailtoLink = `mailto:fathifathima7449@gmail.com,fathifathima7449@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:thepharmafleet@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
 
     setTimeout(() => reset(), 500);
@@ -57,7 +57,7 @@ const Hero = () => {
   return (
     <section className="bg-white">
       {/* FORM SECTION */}
-      <div className="max-w-3xl mx-auto py-12 md:py-20 px-4" id="getintouch">
+      <div className="max-w-3xl mx-auto pt-12 md:pt-20 px-4" id="getintouch">
         <div className="text-center mb-10">
           <p className="text-sm text-[#0d4d2e] font-semibold tracking-widest uppercase mb-2">
             Let’s Get In Touch
@@ -147,7 +147,7 @@ const Hero = () => {
         </form>
 
         {/* SOCIAL ICONS */}
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="https://www.instagram.com/malbrizventuresltd/?igsh=MTd5OGh3aWJnY2ZyYg%3D%3D#"
@@ -176,7 +176,7 @@ const Hero = () => {
               <Image src={Whatsapp} alt="WhatsApp" width={20} height={20} />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* MAP SECTION */}
 <div className="w-full mt-8">
@@ -184,7 +184,7 @@ const Hero = () => {
     Our Location
   </h3>
 
-  <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg px-0 md:px-28">
+  <div className="w-full h-64 md:h-96  overflow-hidden shadow-lg px-0 md:px-28">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363159049!3d-37.8162797420217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f1c7ab%3A0x5045675218ce6e0!2sMelbourne%20VIC!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
       width="100%"
