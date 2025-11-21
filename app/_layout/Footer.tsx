@@ -1,24 +1,41 @@
-import Image from "next/image";
-// import Whatsapp from "@public/instagram.svg";
-// import Facebook from "@public/facebook.svg";
-// import Instagram from "@public/instagram.svg";
 import Link from "next/link";
-import Logo from "@public/pf-logo-2.png";
 
 const Footer = () => {
   return (
     <footer className="bg-[#097969]" id="contact">
-      {/* Top Section */}
       <div className="relative z-10 px-6 md:px-12 lg:px-20 pt-10 md:pt-14 lg:pt-16 pb-6">
-        {/* Contact + Logo Row */}
-        <div className="flex flex-col-reverse md:flex-row md:justify-between w-full mb-10">
+        <div className="flex flex-col-reverse md:flex-row  md:justify-between w-full mb-10">
           {/* Contact Info */}
           <div className="text-white font-serif text-lg md:text-xl leading-relaxed flex flex-col">
-            <div className="flex flex-wrap gap-2 sm:gap-4 ">
-              <Link href="tel:+35699936017">+1 (416) 475-1370</Link>
-              <Link href="tel:+35699936017">+1 (647) 512-7882</Link>
+            <div className="flex items-center flex-wrap gap-2 md:gap-4">
+              {/* Phone Icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                className="w-5 h-5 md:w-6 md:h-5 text-white"
+              >
+                <path
+                  fill="#eaeaeb"
+                  d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"
+                />
+              </svg>
+
+              {/* Phone Numbers */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                <Link href="tel:+14164751370" className="hover:text-green-200">
+                  +1 (416) 475-1370
+                </Link>
+
+                <Link href="tel:+16475127882" className="hover:text-green-200">
+                  +1 (647) 512-7882
+                </Link>
+              </div>
             </div>
-            <Link href="mailto:Info@malbrizventuresltd.com">
+
+            <Link
+              href="mailto:thepharmafleet@gmail.com"
+              className="mt-2 hover:text-green-200"
+            >
               thepharmafleet@gmail.com
             </Link>
           </div>
@@ -33,17 +50,6 @@ const Footer = () => {
               Contact
             </Link>
           </div>
-          <div className="w-40 md:w-56 h-auto mb-6 md:mb-0">
-            <Link href={"/"}>
-              {" "}
-              <Image
-                src={Logo}
-                alt="pharmafleet Logo"
-                className="h-12 w-36 md:w-52  md:h-16 object-cover"
-              />
-            </Link>
-          </div>
-          {/* Logo */}
         </div>
       </div>
 

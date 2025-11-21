@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImg from "@public/homehero.jpg"; // replace with your own image
+import aboutImg from "@public/homehero.jpg"; 
 import TextStaggerAnimation from "../components/animations/TextStaggerAnimation";
 import CardAnimation from "../components/animations/CardAnimation";
 

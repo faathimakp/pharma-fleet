@@ -6,47 +6,52 @@ import Image from "next/image";
 import Logo from "@public/pf-logo-2.png";
 import { usePathname } from "next/navigation";
 
-
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" }
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
-
-const pathname = usePathname();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="bg-[#097969] text-white font-serif sticky top-0 z-[500]">
       <div className=" px-6 md:px-8 py-2 md:py-3 flex items-center justify-between">
-       <Link href="/"> <Image src={Logo} alt="pharmafleet Logo" className="h-12 w-36 md:w-52  md:h-16 object-cover" /></Link>
-         
-        {/* Desktop Navigation */}
-       <nav className="hidden md:flex gap-8 text-lg">
-  {navItems.map((item, index) => {
-    const isActive = pathname === item.path;
-
-    return (
-      <div key={index} className="relative">
-        <Link
-          href={item.path}
-          className={`hover:text-white transition ${
-            isActive ? "text-white font-semibold" : ""
-          }`}
-        >
-          {item.name}
+        <Link href="/">
+          {" "}
+          <Image
+            src={Logo}
+            alt="pharmafleet Logo"
+            className="h-12 w-36 md:w-52  md:h-16 object-cover"
+          />
         </Link>
 
-        {/* underline when active */}
-        {isActive && (
-          <div className="absolute left-0 right-0 -bottom-1 h-[2px] bg-white rounded" />
-        )}
-      </div>
-    );
-  })}
-</nav>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-8 text-lg">
+          {navItems.map((item, index) => {
+            const isActive = pathname === item.path;
+
+            return (
+              <div key={index} className="relative">
+                <Link
+                  href={item.path}
+                  className={`hover:text-white transition ${
+                    isActive ? "text-white font-semibold" : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+
+                {/* underline when active */}
+                {isActive && (
+                  <div className="absolute left-0 right-0 -bottom-1 h-[2px] bg-white rounded" />
+                )}
+              </div>
+            );
+          })}
+        </nav>
 
         {/* Mobile Menu Button */}
         <button
