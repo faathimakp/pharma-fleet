@@ -140,7 +140,7 @@ const Hero = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#0d4d2e] text-white text-lg font-medium px-6 py-3 rounded-md"
+            className="bg-[#0d4d2e] text-white text-sm md:text-lg font-medium px-4 md:px-5 py-2 md:py-3 rounded-md"
           >
             SEND A MESSAGE
           </button>
